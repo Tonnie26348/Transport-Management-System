@@ -2,13 +2,15 @@ spring:
   application:
     name: tms-backend
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:tms_db}
-    username: ${DB_USER:tms_user}
-    password: ${DB_PASSWORD:tms_password}
+    # Supabase Connection URL
+    url: jdbc:postgresql://db.wiknvghwcxvmwkmiqxyw.supabase.co:5432/postgres
+    username: postgres
+    # NOTE: You must replace 'YOUR_SUPABASE_DB_PASSWORD' with your actual database password
+    password: ${DB_PASSWORD:YOUR_SUPABASE_DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
