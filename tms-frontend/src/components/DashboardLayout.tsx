@@ -1,4 +1,4 @@
-import { Box, CssBaseline, AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { Box, CssBaseline, AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemText, ListItemButton } from '@mui/material';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -17,14 +17,20 @@ const DashboardLayout = () => {
       <Drawer sx={{ width: drawerWidth, flexShrink: 0, '& .MuiDrawer-paper': { width: drawerWidth, boxSizing: 'border-box' } }} variant="permanent" anchor="left">
         <Toolbar />
         <List>
-          <ListItem button onClick={() => navigate('/dashboard')}>
-            <ListItemText primary="Overview" />
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('/dashboard')}>
+              <ListItemText primary="Overview" />
+            </ListItemButton>
           </ListItem>
-          <ListItem button onClick={() => navigate('/vehicles')}>
-            <ListItemText primary="Vehicles" />
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('/vehicles')}>
+              <ListItemText primary="Vehicles" />
+            </ListItemButton>
           </ListItem>
-          <ListItem button onClick={() => navigate('/trips')}>
-            <ListItemText primary="Trips" />
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('/trips')}>
+              <ListItemText primary="Trips" />
+            </ListItemButton>
           </ListItem>
         </List>
       </Drawer>
