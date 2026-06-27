@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tms-backend
+    runtime: java
+    buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
+    startCommand: java -jar target/tms-backend-1.0.0.jar
+    rootDir: tms-backend
+    envVars:
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
