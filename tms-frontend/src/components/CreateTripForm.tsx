@@ -24,8 +24,8 @@ const CreateTripForm = ({ open, handleClose }: { open: boolean, handleClose: () 
           <Controller name="routeId" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Route ID" type="number" />} />
           <Controller name="driverId" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Driver ID" type="number" />} />
           <Controller name="vehicleId" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Vehicle ID" type="number" />} />
-          <Controller name="departureTime" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Departure Time" type="datetime-local" InputLabelProps={{ shrink: true }} />} />
-          <Controller name="arrivalTime" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Arrival Time" type="datetime-local" InputLabelProps={{ shrink: true }} />} />
+          <Controller name="departureTime" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Departure Time" type="datetime-local" slotProps={{ inputLabel: { shrink: true } }} />} />
+          <Controller name="arrivalTime" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Arrival Time" type="datetime-local" slotProps={{ inputLabel: { shrink: true } }} />} />
           <Controller name="price" control={control} render={({ field }) => <TextField {...field} margin="normal" required fullWidth label="Price" type="number" />} />
           <DialogActions>
             <Button onClick={handleClose}>Cancel</Button>
