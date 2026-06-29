@@ -2,10 +2,9 @@ spring:
   application:
     name: tms-backend
   datasource:
-    # Supabase Connection URL
+    # HARDCODED for testing
     url: jdbc:postgresql://db.wiknvghwcxvmwkmiqxyw.supabase.co:5432/postgres
     username: postgres
-    # NOTE: You must replace 'YOUR_SUPABASE_DB_PASSWORD' with your actual database password
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
