@@ -1,7 +1,7 @@
 services:
   - type: web
     name: tms-backend
-    environment: java
+    env: java
     buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
     startCommand: java -jar target/tms-backend-1.0.0.jar
     rootDir: tms-backend
