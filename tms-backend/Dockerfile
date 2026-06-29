@@ -17,4 +17,4 @@ COPY src src
 RUN mvn clean package -DskipTests
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "target/tms-backend-1.0.0.jar"]
+ENTRYPOINT ["java", "-Djava.net.preferIPv4Stack=true", "-jar", "target/tms-backend-1.0.0.jar"]
