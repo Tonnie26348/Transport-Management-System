@@ -1,9 +1,7 @@
 services:
   - type: web
     name: tms-backend
-    env: java
-    buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
-    startCommand: java -jar target/tms-backend-1.0.0.jar
+    env: docker
     rootDir: tms-backend
     envVars:
       - key: DB_PASSWORD
